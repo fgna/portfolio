@@ -154,3 +154,19 @@ h3 { font-size: 1.45rem; line-height: 1.15; letter-spacing: -.025em; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Small visual link to the personal website */
+:root {
+  --personal-accent: #ff007f;
+}
+
+.brand::before {
+  content: "";
+  display: inline-block;
+  width: .42em;
+  height: .42em;
+  margin-right: .55em;
+  border-radius: 50%;
+  background: var(--personal-accent);
+  vertical-align: .08em;
+}
