@@ -189,3 +189,15 @@ h3 { font-size: 1.45rem; line-height: 1.15; letter-spacing: -.025em; }
 
 /* Keep illustrated icons clear and consistent on small screens. */
 @media (max-width: 480px) { .square-symbol { height: 30px; } .square-symbol svg { width: 30px; height: 30px; } .square-module { min-height: 108px; } }
+
+/* Reserve a distinct caption band below every project illustration. */
+.project-visual { padding-bottom: 100px; }
+.visual-caption { bottom: 16px; z-index: 2; }
+.square-diagram { align-self: start; margin-top: 10px; }
+.square-module:nth-child(2) .square-symbol,
+.square-module:nth-child(5) .square-symbol { transform: none; margin-left: -5px; }
+@media (max-width: 480px) {
+  .project-visual { padding-bottom: 100px; }
+  .square-diagram { margin-top: 2px; }
+  .visual-caption { bottom: 16px; }
+}
