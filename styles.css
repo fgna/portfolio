@@ -170,3 +170,16 @@ h3 { font-size: 1.45rem; line-height: 1.15; letter-spacing: -.025em; }
   background: var(--personal-accent);
   vertical-align: .08em;
 }
+
+/* Square: compact schematic, consistent with the other project visuals */
+.visual-square { background: linear-gradient(135deg, #e0e7dc, #cdd9cd); }
+.square-diagram { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px 22px; position: relative; width: min(94%, 380px); }
+.square-diagram::before { content: ""; position: absolute; left: 25%; right: 25%; top: 24%; bottom: 24%; border: 3px solid rgba(48,88,72,.35); border-radius: 24px; }
+.square-module { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-height: 94px; padding: 14px; background: rgba(255,255,255,.82); border-radius: 17px; color: #315b4d; }
+.square-module strong { font-size: .82rem; }
+.square-symbol { font-size: 1.05rem; letter-spacing: -.12em; line-height: 1; }
+.square-module i { display: block; width: 85%; height: 6px; border-radius: 8px; background: #d4ded4; }
+.square-module i:last-child { width: 62%; }
+.square-hub { position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%,-50%); display: grid; place-items: center; width: 94px; height: 65px; border-radius: 17px; background: #315b4d; color: #fff; font-weight: 800; font-size: 1.12rem; box-shadow: 0 6px 20px rgba(35,65,52,.12); }
+.visual-square .visual-caption { color: #526e60; }
+@media (max-width: 480px) { .square-diagram { gap: 12px; } .square-module { padding: 12px; } .square-hub { width: 80px; height: 54px; } }
