@@ -178,7 +178,7 @@ h3 { font-size: 1.45rem; line-height: 1.15; letter-spacing: -.025em; }
 .square-module { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-height: 94px; padding: 14px; background: rgba(255,255,255,.82); border-radius: 17px; color: #315b4d; }
 .square-module strong { font-size: .82rem; }
 .square-symbol { display: flex; align-items: center; height: 34px; color: #315b4d; }
-.square-module:nth-child(2) .square-symbol, .square-module:nth-child(5) .square-symbol { transform: translateX(-10px); }
+
 .square-symbol svg { display: block; width: 36px; height: 36px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
 .square-symbol circle { fill: none; }
 .square-module i { display: block; width: 85%; height: 6px; border-radius: 8px; background: #d4ded4; }
@@ -190,14 +190,15 @@ h3 { font-size: 1.45rem; line-height: 1.15; letter-spacing: -.025em; }
 /* Keep illustrated icons clear and consistent on small screens. */
 @media (max-width: 480px) { .square-symbol { height: 30px; } .square-symbol svg { width: 30px; height: 30px; } .square-module { min-height: 108px; } }
 
-/* Reserve a distinct caption band below every project illustration. */
-.project-visual { padding-bottom: 100px; }
-.visual-caption { bottom: 16px; z-index: 2; }
-.square-diagram { align-self: start; margin-top: 10px; }
+/* Keep captions below illustrations without an oversized empty band. */
+.project-visual { padding-bottom: 54px; }
+.visual-caption { bottom: 12px; z-index: 2; }
+.square-diagram { align-self: center; margin-top: 0; }
+/* Right-column icons belong at the right edge of their own modules. */
 .square-module:nth-child(2) .square-symbol,
-.square-module:nth-child(5) .square-symbol { transform: none; margin-left: -5px; }
+.square-module:nth-child(5) .square-symbol { transform: none; margin-left: auto; margin-right: 0; }
 @media (max-width: 480px) {
-  .project-visual { padding-bottom: 100px; }
-  .square-diagram { margin-top: 2px; }
-  .visual-caption { bottom: 16px; }
+  .project-visual { padding-bottom: 54px; }
+  .square-diagram { margin-top: 0; }
+  .visual-caption { bottom: 12px; }
 }
