@@ -202,3 +202,7 @@ h3 { font-size: 1.45rem; line-height: 1.15; letter-spacing: -.025em; }
   .square-diagram { margin-top: 0; }
   .visual-caption { bottom: 12px; }
 }
+
+/* Readable captions on light illustrations; consistent FreyaOS caption contrast. */
+.visual-map .visual-caption { color: #315b4d; }
+.visual-taskos .visual-caption { color: #f0f5f1; }
